@@ -60,7 +60,7 @@ export function StoreInventoryStatus({ order, onRefresh }: StoreInventoryStatusP
   const [isLoading, setIsLoading] = useState(true);
   const [showCustomerDetails, setShowCustomerDetails] = useState(false);
 
-  // إظها�� تفاصي�� العميل تلقائياً عندما يكون الطلب متوفراً
+  // إظهار تفاصيل العميل تلقائياً عندما يكون الطلب متوفراً
   useEffect(() => {
     if (order.store_response_status === 'available') {
       setShowCustomerDetails(true);
@@ -168,7 +168,7 @@ export function StoreInventoryStatus({ order, onRefresh }: StoreInventoryStatusP
       return {
         status: 'unassigned',
         label: 'غير معين',
-        message: 'لم يتم تعيين ال��تجر بعد',
+        message: 'لم يتم تعيين المتجر بعد',
         color: 'bg-gray-100 text-gray-800',
         icon: Store,
         variant: 'secondary' as const
@@ -237,7 +237,7 @@ export function StoreInventoryStatus({ order, onRefresh }: StoreInventoryStatusP
       }
     }
 
-    // إذا ��م يكن هناك رد بعد
+    // إذا لم يكن هناك رد بعد
     return {
       status: 'pending',
       label: 'بانتظار رد المتجر',
@@ -356,7 +356,7 @@ export function StoreInventoryStatus({ order, onRefresh }: StoreInventoryStatusP
             {/* Store Name */}
             <div className="flex items-center gap-2 mt-2 text-sm text-gray-600">
               <Store className="w-4 h-4" />
-              <span>المتجر ��لمعين: <strong>{storeName}</strong></span>
+              <span>المتجر المعين: <strong>{storeName}</strong></span>
             </div>
           </div>
         </div>

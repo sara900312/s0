@@ -28,7 +28,7 @@ export function StoreInventoryStatusDisplay({
     return null;
   }
 
-  // إذا لم يرد الم��جر بعد، نعرض حالة الانتظار
+  // إذا لم يرد المتجر بعد، نعرض حالة الانتظار
   if (!order.store_response_status) {
     return (
       <div className={`flex items-start gap-2 p-3 rounded-lg border ${compact ? 'bg-blue-50 border-blue-200' : 'bg-blue-50'}`}>
@@ -42,7 +42,7 @@ export function StoreInventoryStatusDisplay({
             المتجر لم يقم بفحص توفر هذا المنتج في مخزونه بعد
           </div>
           <div className="text-xs text-gray-500 mt-2">
-            💡 ا��متجر سيرى هذا الطلب في لوحة تحكمه ويحدد إذا كان المنتج متوفر أم لا
+            💡 المتجر سيرى هذا الطلب في لوحة تحكمه ويحدد إذا كان المنتج متوفر أم لا
           </div>
         </div>
       </div>

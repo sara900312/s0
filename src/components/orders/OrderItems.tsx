@@ -69,7 +69,7 @@ export const OrderItems: React.FC<OrderItemsProps> = ({
     } else if ('products' in item && item.products && item.products.name &&
                typeof item.products.name === 'string' &&
                item.products.name.trim() !== '' &&
-               item.products.name !== 'منتج غير محدد') {
+              item.products.name !== 'منتج غير محدد') {
       // استخدام اسم المنتج من جدول products المرتبط
       productName = item.products.name;
     } else {

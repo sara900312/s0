@@ -487,7 +487,7 @@ export function StoreProductAvailabilityCheck({
                 const defaultItem = {
                   id: `default-${order.id}`,
                   product_name: defaultProductName,
-                  name: defaultProductName, // إض��فة name كـ fallback
+                  name: defaultProductName, // إضافة name كـ fallback
                   quantity: 1,
                   price: order.total_amount || order.subtotal || 205000,
                   discounted_price: order.total_amount || order.subtotal || 205000
@@ -525,14 +525,14 @@ export function StoreProductAvailabilityCheck({
     );
   }
 
-  // إ��ا كانت الخطوة الح��لية تتطلب إخفاء المكون
+  // إذا كانت الخطوة الحالية تتطلب إخفاء المكون
   if (currentStep === 'rejected') {
     return null;
   }
 
   // إذا تم اختيار "متوفر" أو "غير متوفر" مسبقاً، لا تعرض نافذة الاختيار مرة أخرى
   if (storeChoiceMade || order.store_response_status === 'available' || order.store_response_status === 'unavailable') {
-    return null; // سيتم عرض ا��محتوى المناسب من الشروط السابقة
+    return null; // سيتم عرض المحتوى المناسب من الشروط السابقة
   }
 
   // العرض الأولي - اسم المنتج فقط مع الأزرار (يظهر مرة واحدة فقط)
@@ -550,13 +550,13 @@ export function StoreProductAvailabilityCheck({
               <p className="text-sm text-orange-600">
               </p>
               <p className="text-sm text-gray-600 mt-2">
-                ��لمبلغ: {order.subtotal ? formatCurrency(order.subtotal) : formatCurrency(order.total_amount || 0)}
+                المبلغ: {order.subtotal ? formatCurrency(order.subtotal) : formatCurrency(order.total_amount || 0)}
               </p>
             </div>
 
             {/* عرض تفاصيل المنتج بشكل مصغر */}
             <div className="bg-white border border-orange-200 rounded-lg p-3">
-              <h4 className="font-semibold text-orange-800 mb-2 text-sm">تف��صيل المنتج:</h4>
+              <h4 className="font-semibold text-orange-800 mb-2 text-sm">تفاصيل المنتج:</h4>
               <div className="text-sm text-gray-700 space-y-1">
                 <div></div>
                 <div><span className="font-medium">{t('quantity.label')}</span> {order.order_items?.[0]?.quantity || 1}</div>
@@ -606,7 +606,7 @@ export function StoreProductAvailabilityCheck({
                 <strong>✔️ متوفر:</strong> عرض تفاصيل المنتج وإعداد التسليم
               </p>
               <p>
-                <strong>�� غير متوفر:</strong> إدخال سبب عدم التوفر وإرجاع للمدير
+                <strong>❌ غير متوفر:</strong> إدخال سبب عدم التوفر وإرجاع للمدير
               </p>
             </div>
           </div>

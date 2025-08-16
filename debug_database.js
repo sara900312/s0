@@ -16,7 +16,7 @@ async function debugDatabase() {
     } else {
       console.log('✅ عدد الطلبات:', orders?.length || 0);
       orders?.forEach((order, index) => {
-        console.log(`\nط��ب ${index + 1}:`);
+        console.log(`\nطلب ${index + 1}:`);
         console.log('- ID:', order.id);
         console.log('- العميل:', order.customer_name);
         console.log('- تاريخ الإنشاء:', order.created_at);
